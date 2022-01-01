@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Quicksand:wght@600&display=swap');
+
+:root{
+    --Playfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --dark : #2c2c2c;
+    --exDark: #2b2b2b;
+}
+
+
+/* ROOT DESIGN */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Quicksand);
+}
+
+body{
+    color: var(--dark);
+    line-height: 1.4;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ROOT ENDS */
+
+
+/* HEADER STARTS */
+
+header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), 
+    rgba(0,0,0,0.4)), 
+    url("/static/images/bg.jpg")
+    center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.navbar{
+    background: rgba(0,0,0,0.6);
+    padding:20px;
+}
+
+.logo-brand{
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.navbar-nav{
+    padding: 0.8rem 0 0.2rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    display: inline-block;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.navbar-nav a:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.banner{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h1{
+    font-size: 3rem;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner h1 span{
+    color: var(--exDark);
+}
+
+
+.banner form{
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    width:100%;
+    outline : 0;
+    border: none;
+}
+
+.search-input::placeholder{
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+.search-btn{
+    width: 3rem;
+    font-size: 20px;
+    color: var(--dark);
+    border: none;
+    padding: 0.3rem 0.2rem;
+    background: transparent;
+    outline : 0;
+    cursor : pointer;
+}
+
+
+
+
+
+/* HEADER ENDS */
+
+
+.project{
+    padding: 4.5rem 0;
+}
+
+.title{
+    text-align:center;
+    padding: 1rem 0;
+}
+
+.title h2 {
+    font-family: var(--Playfair);
+    font-size:2.4rem;
+}
+
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+.content-project{
+    margin: 2rem 0;
+}
+
+.project-item{
+    cursor: pointer;
+}
+
+.project-img{
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img::after{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;  
+}
+.project-img img{
+    transition: all 0.5s ease;
+}
+.project-img:hover img{
+    transform: scale(1.2);
+    background: rgba(0,0,0,0.3);
+}
+
+.project-img span:first-of-type{
+    position: absolute;
+    z-index: 1;
+    top:10px;
+    left:10px;
+    background: var(--exDark);
+    color: #fff;
+    padding : 0.5rem 1rem;
+}
+
+.project-img span:last-of-type{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right:10px;
+    color: #2c2c2c;
+    color: cadetblue;
+    padding : 0.5rem 1rem;
+    font-weight: 1500;
+    font-size:1.3rem;
+}
+
+.project-info{
+    padding: 3rem;
+    text-align:center;
+    font-size:1rem;
+    width:70%;
+    margin: 0 auto;
+    font-family: var(--dark);
+}
+
+.project-info a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: cadetblue;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+/* BLOG DESIGN */
+
+.blog{
+    padding: 4.5rem 0;
+    background: #f9f9f9;
+}
+
+.blog-content{
+    padding: 2rem 0;
+}
+
+.blog-img{
+    overflow: hidden;
+    position: relative;
+}
+
+
+.blog-img span{
+    position: absolute;
+    z-index: 1;
+    bottom:10px;
+    right:10px;
+    background: var(--exDark);
+    color: #fff;
+    padding : 0.5rem 1rem;
+}
+
+
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 1rem 0;
+}
+.blog-text span{
+    font-weight: 500;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+.blog-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.blog-text a{
+    font-family: var(--Roboto);
+    font-size:1.1rem;
+    color:var(--dark);
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding : 0.5em;
+    text-decoration: none;
+}
+
+
+.blog-text a:hover{
+    background: var(--exDark);
+
+}
+
+
+.about{
+    padding: 4.5rem 0;
+}
+
+.about-text{
+    margin:2rem 0;
+}
+
+.about-text h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.about-text p{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+
+/* Footer */
+
+footer{
+    background: var(--dark);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin: auto 0;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    margin-bottom: 1.4rem;
+}
+
+
+.social a i{
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+/* BLOG DESIGN ENDS */
+
+
+@media screen and (min-width: 540px){
+    .navbar-nav a{
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+    }
+
+    .banner-title{
+        font-size: 5rem;
+    }
+
+    .banner form{
+        margin-top: 1.4rem;
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search-input{
+        padding: 0.8rem 0;
+    }
+    .content-project{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+    }
+
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+/* @media screen and (min-width: 992px){
+    .blog-content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+    }
+} */
