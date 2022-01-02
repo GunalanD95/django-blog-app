@@ -84,7 +84,8 @@ DATABASES = {
 }
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 
 # Password validation
@@ -124,12 +125,14 @@ USE_TZ = True
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = (
 )
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage' 
 
