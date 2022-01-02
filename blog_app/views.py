@@ -13,3 +13,8 @@ def index(request):
 class addblog(ListView):
     model = Blog
     context_object_name = 'blogs'
+
+def blog(request, blog_id):
+    blog = Blog.objects.get(pk=blog_id)
+    return render(request, 'blog_app/blog.html', 
+                  {'blog': blog})

@@ -1,7 +1,4 @@
 {% load static %}
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,34 +6,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <title>CREATE BLOG </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Guna's Blog</title>
 </head>
 <body>
-    <div class="container">
-        <h1> BLOGS </h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Blog Title</th>
-                </tr>
-            </thead>
-                {% for blog in blogs %}
-            <tbody>
-                <tr>
-                    <td>{{blog.title}}</td>
-                    <td>{{blog.id}}</td>
-                </tr>
-                {% empty %}
-                <h1>No blogs found in database</h1>
-                {% endfor %}
-            </tbody>
-        
-        </table>  
-    </div>
-    
+    <!-- HEADER STARTS -->
+                    <header>
+                        <nav class="navbar">
+                            <div class="container">
+                                <a href="" class="logo-brand">GUNALAN D</a>
 
- 
+                                <div class="navbar-nav">
+                                    <a href="">HOME</a>
+                                    <a href="">PROJECTS</a>
+                                    <a href="">BLOGS</a>
+                                    <a href="">CONTACT ME</a>
+                                    <a href="">ABOUT ME</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+
+                    <!-- SINGLE POST STARTS -->
+
+
+                    <div class="main-blog">
+                        <div class="container">
+                                <div class="blog-img">
+                                    {% if blog.blog_image %}
+                                    <img src="{{ blog.blog_image.url }}">
+                                    {% endif %}
+                                </div>
+
+                                <div class="blog-title">
+                                    <h2>{{ blog.title }}</h2>
+                                    <p>{{ blog.body }}</p>
+                                    <table>
+                                        <tr>
+                                            <th>Written by</th>
+                                            <th style="width: 30%;"></th>
+                                            <th>Posted on</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Gunalan Deivaganpathy</td>
+                                            <td style="width: 30%;"></td>
+                                            <td>{{ blog.created_at }}</td>
+                                        </tr>
+                                    </table>
+
+                                    <div class="blog-new">
+                                        <p>{{ blog.content }}</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- SINGLE POST ENDS -->
+
+                    <section class="about" class="about">
+                        <div class="container">
+                            <div class="about-content">
+                                <div>
+                                    <img src="{% static 'images/about-me.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <div class="title">
+                                        <h2>Gunalan D</h2>
+                                        <p>Python Developer</p>
+                                    </div>
+                                    <p>Hello! I'm Gunalan, a odoo developer, a python enthusiast, and a guy slighty obsessed for code quality.I am currently open to exploring new opportunities. If you have a role that my matches with my profile, then get in touch.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ABOUT ENDS -->
+
+                    <!-- SOCIAL LINKS STARTS -->
+
+                    <footer>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <span>Gunalan's Blog</span>
+                </footer>
+                    <!-- SOCIAL LINKS ENDS -->
 </body>
 </html>
-
-

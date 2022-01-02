@@ -147,8 +147,8 @@
                                 <div class="blog-text">
                                     <span>{{blog.created_at}}<span>
                                         <h2>{{blog.title}}</h2>
-                                        <p>{{blog.body}}</p>                          
-                                        <a href="#">Read More</a>
+                                        <p>{{blog.body}}</p>
+                                        <a href="{% url 'blog' blog.id %}">Read More</a>                          
                                 </div>
                                 {% endfor %}
                             </div>
