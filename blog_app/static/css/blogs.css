@@ -87,6 +87,7 @@ header{
     text-decoration: underline;
 }
 
+
 .banner{
     flex:1;
     display: flex;
@@ -240,6 +241,7 @@ header{
 .blog{
     padding: 4.5rem 0;
     background: #f9f9f9;
+    border-top: 1px solid black;
 }
 
 .blog-content{
