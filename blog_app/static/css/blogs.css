@@ -320,7 +320,11 @@ header{
     font-size: 1.3rem;
 }
 
-
+.new-blog .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* Footer */
 
 footer{
@@ -367,6 +371,12 @@ footer{
 
 @media screen and (min-width: 768px){
     .navbar .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .new-blog{
         display: flex;
         align-items: center;
         justify-content: space-between;
