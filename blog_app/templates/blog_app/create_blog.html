@@ -1,0 +1,34 @@
+{% extends "blog_app/layout.html" %}
+
+{% block body %}
+
+
+    <h1>CREATE A BLOG</h1>
+
+        
+
+    <!-- <form action="{% url 'create_blog' %}" method="POST"> -->
+    <form method="POST">
+        {% csrf_token %}
+        <!-- <label for="title">Blog Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="description">Blog Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="create_date">Created Date:</label>
+        <input type="date" id="create_date" name="create_date"><br><br>
+
+        <label for="blog_img">Blog Image:</label>
+        <input type="file" id="blog_img" name="blog_img"><br><br>
+
+        <label for="blog_content">Blog Content:</label>
+        <input type="text" id="blog_content" name="blog_content"><br><br> -->
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock %}

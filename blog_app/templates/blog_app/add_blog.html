@@ -15,14 +15,15 @@
     <header>
         <nav class="navbar">
             <div class="container">
-                <a href="" class="logo-brand">GUNALAN D</a>
+                <a href="{% url 'blogs' %}" class="logo-brand">GUNALAN D</a>
+                <a href="{% url 'create_blog' %}">CREATE A POST</a>
 
                 <div class="navbar-nav">
-                    <a href="#" href="">HOME</a>
+                    <a href="/" href="">HOME</a>
                     <a href="#project" href="">PROJECTS</a>
                     <a href="#blog" href="">BLOGS</a>
                     <a href="#social" href="">CONTACT ME</a>
-                    <a href="#about" href="">ABOUT ME</a>
+                    <a href="#about" href="">ABOUT ME</a>  
                 </div>
             </div>
         </nav>
