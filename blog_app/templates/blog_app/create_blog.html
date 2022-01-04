@@ -8,6 +8,9 @@
         
 
     <!-- <form action="{% url 'create_blog' %}" method="POST"> -->
+    <div class="form-group">
+
+    
     <form method="POST">
         {% csrf_token %}
         <!-- <label for="title">Blog Title:</label>
@@ -29,6 +32,7 @@
 
         <input type="submit" value="Submit">
     </form>
+    </div>
 
 
 {% endblock %}
