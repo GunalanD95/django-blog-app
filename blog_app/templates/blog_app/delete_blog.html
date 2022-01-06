@@ -3,7 +3,6 @@
 {% block body %}
 
 
-    <h1>DELETE THIS BLOG</h1>
     <style>
         .form-group {
             margin-top: 40px;
@@ -12,7 +11,7 @@
 
         .form-group form {
         display: grid;
-      grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
 
 
 
@@ -21,6 +20,15 @@
       align-content: center;
       column-gap: 30px;
       row-gap: 30px;
+        }
+
+        .delete{
+            border-radius: 5%;
+            padding:0.5rem;
+            background: aqua;
+            color: black;
+            font-size: 0.9rem;
+            cursor: pointer;
         }
     </style>
 
@@ -31,7 +39,10 @@
         {% csrf_token %}
 
         {{ form.as_p }}
-        <input type="submit" value="Submit">
+        <!-- add a delete button with are your sure? -->
+        <h2>Are you Sure Wanna Delete This Blog?</h2>
+        <input class="delete" type="submit" value="Delete">
+
     </form>
     </div>
 
