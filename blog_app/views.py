@@ -21,6 +21,11 @@ class UpdateBlogView(UpdateView):
     template_name = 'blog_app/update_post.html'
     fields = '__all__'
 
+class DeleteBlogView(DeleteView):
+    model = Blog
+    template_name = 'blog_app/delete_blog.html'
+    success_url = '/'
+
 def blog(request, blog_id):
     blog = Blog.objects.get(pk=blog_id)
     return render(request, 'blog_app/blog.html', 

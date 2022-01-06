@@ -155,6 +155,7 @@
                                         <p>{{blog.body}}</p>
                                         <a href="{% url 'blog' blog.id %}">Read More</a>                          
                                         <a href="{% url 'update_blog' blog.id %}">Edit Blog</a>                          
+                                        <a href="{% url 'delete_blog' blog.id %}">Delete Blog</a>                          
                                 </div>
                                 {% endfor %}
                             </div>
