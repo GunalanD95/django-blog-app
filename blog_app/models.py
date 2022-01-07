@@ -21,3 +21,6 @@ class Blog(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog', args=[str(self.id)])
+
+    class Meta:
+        ordering = ['-created_at']
