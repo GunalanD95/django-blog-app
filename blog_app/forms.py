@@ -10,7 +10,7 @@ class BlogForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-            # 'blog_image': forms.ImageField(attrs={'class': 'form-control'}),
+            'blog_image': forms.FileInput(attrs={'class': 'form-control','enctype': 'multipart/form-data'}),
             'created_at': forms.DateInput(attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
         }
