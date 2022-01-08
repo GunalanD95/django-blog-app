@@ -16,7 +16,7 @@
         <nav class="navbar">
             <div class="container">
                 <a href="/" class="logo-brand">GUNALAN D</a>
-                <a href="{% url 'create_blog' %}">CREATE A POST</a>
+                
 
                 <div class="navbar-nav">
                     <a href="/" href="">HOME</a>
@@ -136,6 +136,7 @@
                             <div class="title">
                                 <h2>Latest Blogs</h2>
                                 <p>recent blogs of mine</p>
+                                <a class="createblog" href="{% url 'create_blog' %}">CREATE A BLOG</a>
                             </div>
                             {% for i in blogs %}
                                <div class="blog-content">

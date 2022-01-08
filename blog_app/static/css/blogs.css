@@ -342,6 +342,9 @@ footer{
     margin-bottom: 1.4rem;
 }
 
+.createblog{
+    background: red;
+}
 
 .social a i{
     font-size: 1.5rem;
@@ -397,6 +400,9 @@ footer{
         gap: 2rem;
     }
 }
+
+
+
 
 /* @media screen and (min-width: 992px){
     .blog-content{
