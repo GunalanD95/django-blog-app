@@ -1,0 +1,58 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+
+
+    <style>
+        .form-group {
+            margin-top: 40px;
+            padding: 4rem;
+        }
+
+        .form-group form {
+        display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+
+
+      /* Align items */
+      justify-content: center;
+      align-content: center;
+      column-gap: 30px;
+      row-gap: 30px;
+        }
+    </style>
+
+        
+
+    <!-- <form action="{% url 'create_blog' %}" method="POST"> -->
+    <div class="form-group">
+
+    
+    <form method="POST" enctype='multipart/form-data'>
+        <h1 style="font-weight:900">CREATE A USER</h1>
+
+        {% csrf_token %}
+        <!-- <label for="title">Blog Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="description">Blog Description:</label>
+        <input type="text" id="description" name="description"><br><br>
+
+        <label for="create_date">Created Date:</label>
+        <input type="date" id="create_date" name="create_date"><br><br>
+
+        <label for="blog_img">Blog Image:</label>
+        <input type="file" id="blog_img" name="blog_img"><br><br>
+
+        <label for="blog_content">Blog Content:</label>
+        <input type="text" id="blog_content" name="blog_content"><br><br> -->
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+{% endblock %}

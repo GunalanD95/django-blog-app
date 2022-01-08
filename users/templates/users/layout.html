@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Guna's Blog</title>
+</head>
+<body>
+    <!-- HEADER STARTS -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'blogs' %}" class="logo-brand">GUNALAN D</a>
+
+                <div class="navbar-nav">
+                    <a href="/">HOME</a>
+                    <a href="#project" href="">PROJECTS</a>
+                    <a href="#blog" href="">BLOGS</a>
+                    <a href="#social" href="">CONTACT ME</a>
+                    <a href="#about" href="">ABOUT ME</a>
+                </div>
+            </div>
+        </nav>
+
+                    {% block body %}
+                    {% endblock %}
+
+    </header>
+    <!-- HEADER ENDS -->
+
+                    
+
+
+                        <!-- ABOUT STARTS -->
+
+                    <section class="about" id="about">
+                        <div class="container">
+                            <div class="about-content">
+                                <div>
+                                    <img src="{% static 'images/about-me.png' %}" alt="">
+                                </div>
+
+                                <div class="about-text">
+                                    <div class="title">
+                                        <h2>Gunalan D</h2>
+                                        <p>Python Developer</p>
+                                    </div>
+                                    <p>Hello! I'm Gunalan, a odoo developer, a python enthusiast, and a guy slighty obsessed for code quality.I am currently open to exploring new opportunities. If you have a role that my matches with my profile, then get in touch.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- ABOUT ENDS -->
+
+                    <!-- SOCIAL LINKS STARTS -->
+
+                    <footer>
+                    <div class="social" id="social">
+                        <a href="https://twitter.com/GunalanD3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/GunalanD95"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gunalan-deivaganapathy/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <span>Gunalan's Blog</span>
+                </footer>
+                    <!-- SOCIAL LINKS ENDS -->
+</body>
+</html>
