@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+  <title>REGISTER</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="box">
+      <form method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        <h2>REGISTER</h2>
+        <div class="form-group">
+          <p>Username</p>
+          <input class="text" type="text" name="username" class="form-control" id="username" placeholder="Username">
+          <p>Email</p>
+          <input class="text" type="text" name="email" class="form-control" id="email" placeholder="Username">
+          <p>Password</p>
+          <input class="text" type="password" name="password" class="form-control" id="password" placeholder="Password">
+          <p>Re-enter Password</p>
+          <input class="text" type="password" name="re-password" class="form-control" id="re-password" placeholder="Re-enter Password">
+          <input class="submit" type="submit" value="SUBMIT">
+        </div>
+
+        <div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Already have an account? <a href="{% url 'logins' %}" class="ml-2">Login</a>
+					</div>
+				</div>
+
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

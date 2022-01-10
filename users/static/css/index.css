@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@200&family=Quicksand:wght@600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.4), 
+    rgba(0,0,0,0.4)), 
+    url("/static/images/bgs.jpg")
+    center/cover no-repeat fixed;
+}
+
+.container{
+    width:450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box{
+    position: absolute;
+    /* background: #ffff; */
+    background-color: transparent;
+
+    /* border: 2px solid #d2d2d2; */
+    margin-top: 17rem;
+    width: 25rem;
+    text-align: center;
+    /* padding: 3rem; */
+
+}
+
+.form-group{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display:grid;
+    grid-template-columns: auto;
+    gap:20px;
+}
+
+p{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    /* font-family: Playfair Display, serif; */
+}
+
+.text{
+    border: 1.7px solid black;
+    padding: 4px;
+}
+
+.submit{
+    border-radius: 5%;
+    padding: 4px;
+    color:#fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #555555;
+    cursor: pointer;
+}
+
+ /* h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffff;
+}  */
+
+
+.mt-4{
+    margin-top: 4rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.mt-4 a{
+    text-decoration: none;
+    color:cornsilk;
+}
+
+h2{
+    font-weight: bold;
+    color: #ffff;
+    font-family: Playfair Display, serif;
+} 
