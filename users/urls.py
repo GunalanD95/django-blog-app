@@ -6,5 +6,5 @@ from .views import UserCreateView
 
 urlpatterns = [
     path('signup/',UserCreateView.as_view(),name='signup'),
-    # path('login/',views.index,name='login'),
+    # path('login/',views.lo,name='login'),
 ]
