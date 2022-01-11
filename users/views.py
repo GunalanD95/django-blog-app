@@ -6,6 +6,7 @@ from django.views.generic.edit import FormView
 from .forms import CreateUserForm 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login , logout
+from django.contrib import messages
 
 # Create your views here.
 
@@ -39,6 +40,6 @@ def index(request):
             login(request, user)
             return redirect('blogs')
         else:
-            print("user is None")
+            messages.error(request, 'Username or Password is incorrect')
             return redirect('logins')
     return render(request, 'registration/index.html')

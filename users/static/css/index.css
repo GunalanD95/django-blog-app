@@ -99,3 +99,15 @@ h2{
     list-style: none;
     text-transform: capitalize;
 }
+
+.messages{
+    /* color: #00529B;
+    background-color: #BDE5F8; */
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+}
