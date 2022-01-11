@@ -87,3 +87,15 @@ h2{
     color: #ffff;
     font-family: Playfair Display, serif;
 } 
+
+.errorlist{
+    /* color: #00529B;
+    background-color: #BDE5F8; */
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+}

@@ -7,6 +7,12 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+        error_css_class = "error"
 
 
 
+# class LoginUsForm(forms.Form):
+#     class Meta:
+#         model = User
+#         fields = ['username','password']
+#         error_css_class = "error"

@@ -16,6 +16,8 @@
       <form method="POST" enctype='multipart/form-data'>
         {% csrf_token %}
         <h2>Log In</h2>
+        <!-- {{ form.errors }}
+        {{ form.non_field_errors }} -->
         <div class="form-group">
           <p>Username</p>
           <input class="text" type="text" name="username" class="form-control" id="username" placeholder="Username">
