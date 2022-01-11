@@ -37,7 +37,7 @@ def index(request):
         if user is not None:
             print("user:", user)
             login(request, user)
-            redirect('blogs')
+            return redirect('blogs')
         else:
             print("user is None")
             return redirect('logins')
