@@ -7,6 +7,6 @@ from . import views
 urlpatterns = [
     # path('signup/',UserCreateView.as_view(),name='signup'),
     path('signup/',views.register,name='signup'),
-    path('',views.index,name='logins'),
+    path('login/',views.index,name='logins'),
     path("blog/", include("blog_app.urls"),name="blogs"),
 ]
