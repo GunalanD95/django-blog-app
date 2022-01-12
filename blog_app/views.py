@@ -7,9 +7,10 @@ from .forms import BlogForm
 
 
 def index(request):
-    blog = Blog.objects.all()
-    length_of_blogs = len(blog) - 1
-    return render(request, 'blog_app/add_blog.html',{'blogs':blog , 'n': range(1,length_of_blogs)})
+    data = {
+        'blogs': Blog.objects.all(),
+    }
+    return render(request, 'blog_app/add_blog.html',data)
 
 class AddBlogView(CreateView):
     model = Blog

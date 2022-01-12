@@ -139,10 +139,8 @@
                                 <p>recent blogs of mine</p>
                                 <a class="createblog" href="{% url 'create_blog' %}">CREATE A BLOG</a>
                             </div>
-                            {% for i in blogs %}
-                               <div class="blog-content">
-                                {% for blog in blogs %}
-                                
+                            {% for blog in blogs %}
+                               <div class="blog-content">                                
                                 <div class="blog-item">
                                     <div class="blog-img">
                                         {% if blog.blog_image %}
@@ -159,7 +157,6 @@
                                         <a href="{% url 'update_blog' blog.id %}">Edit Blog</a>                          
                                         <a href="{% url 'delete_blog' blog.id %}">Delete Blog</a>                          
                                 </div>
-                                {% endfor %}
                             </div>
                             {% endfor %}
                         </div>
