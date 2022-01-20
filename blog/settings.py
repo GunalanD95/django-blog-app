@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x8*9jd&rgtvdrm-lskqtw@1lttyu)u2*)76ok6car9o&^0_4sk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost','gunablog.herokuapp.com']
 
 
 LOGIN_REDIRECT_URL = '/blog/'
